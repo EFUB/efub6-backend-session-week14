@@ -1,5 +1,5 @@
 dependencies {
-    implementation project(':blog-core') // core의 클래스가 보이게 된다
+    // TODO 4. blog-core 모듈을 의존성으로 추가하세요.
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // core가 implementation으로 가지므로 여기서도 선언해야 JpaRepository 타입이 보인다

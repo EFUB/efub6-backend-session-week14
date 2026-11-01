@@ -25,11 +25,8 @@ public class AdminPostService {
 
     @Transactional
     public AdminPostResponse hide(Long id) {
-        Post post = postRepository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("글이 없습니다. id="+id));
-
-        post.hide();
-        return AdminPostResponse.from(post);
+        // TODO 7. id로 글을 찾아 TODO 2에서 만든 hide()를 호출하고 AdminPostResponse.from(...)으로 돌려주세요.
+        return null;
     }
 
 

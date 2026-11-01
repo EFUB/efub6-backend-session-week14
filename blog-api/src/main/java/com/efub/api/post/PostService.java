@@ -21,14 +21,13 @@ public class PostService {
 
     @Transactional
     public PostResponse create(PostCreateRequest request) {
-        Post saved = postRepository.save(request.toEntity());
-        return PostResponse.from(saved);
+        // TODO 5-1. request를 엔티티로 바꿔 저장하고, PostResponse.from(...)으로 돌려주세요.
+        return null;
     }
 
     public List<PostResponse> findVisiblePosts() {
-        return postRepository.findAllByHiddenFalseOrderByIdDesc().stream()
-                .map(PostResponse::from)
-                .toList();
+        // TODO 5-2. TODO 3에서 만든 리포지토리 메서드로 숨기지 않은 글을 가져와 PostResponse 목록으로 바꾸세요.
+        return List.of();
     }
 
     public PostResponse findOne(Long id) {

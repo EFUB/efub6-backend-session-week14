@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:file:~/efub-blog;AUTO_SERVER=TRUE # 파일 DB + 다른 JVM(blog-admin)도 붙을 수 있게
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update # 두 앱이 같은 DB를 쓰므로 create 대신 update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
